@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TiendaTee | Camisetas de fútbol</title>
+  <meta name="description" content="TiendaTee: diseños únicos de camisetas de fútbol. Calidad, estilo y comodidad en un solo lugar.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="site-shell">
+    <!-- Barra de navegación -->
+    <header class="site-header">
+      <div class="nav-inner">
+        <a href="#inicio" class="brand" data-nav="inicio" aria-label="TiendaTee inicio">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 48 48" fill="none">
+              <path d="M16 10h16l8-4 2 8-6 3v21a3 3 0 0 1-3 3H15a3 3 0 0 1-3-3V17l-6-3 2-8 8 4z" fill="#fff"/>
+              <path d="M16 10h16" stroke="#e31c2d" stroke-width="2"/>
+            </svg>
+          </span>
+          <span class="brand-name">Tienda<span>Tee</span></span>
+        </a>
+
+        <button class="menu-toggle" id="menuToggle" type="button" aria-expanded="false" aria-controls="mainNav" aria-label="Abrir menú">
+          <span></span><span></span><span></span>
+        </button>
+
+        <nav class="main-nav" id="mainNav" aria-label="Principal">
+          <a href="#inicio" data-nav="inicio" class="nav-link is-active">Inicio</a>
+          <a href="#tienda" data-nav="tienda" class="nav-link">Tienda</a>
+          <a href="#categorias" data-nav="categorias" class="nav-link">Categorías</a>
+          <a href="#nosotros" data-nav="nosotros" class="nav-link">Nosotros</a>
+          <a href="#contacto" data-nav="contacto" class="nav-link">Contacto</a>
+        </nav>
+
+        <form class="search-form" id="searchForm" role="search">
+          <input type="search" id="searchInput" name="q" placeholder="Buscar camisetas....." autocomplete="off" aria-label="Buscar camisetas">
+          <button type="submit" aria-label="Buscar">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/>
+            </svg>
+          </button>
+        </form>
+
+        <div class="nav-actions">
+          <a href="#cuenta" class="icon-btn" data-nav="cuenta" aria-label="Mi cuenta">
+            <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="#fff" stroke-width="1.7">
+              <circle cx="12" cy="8" r="3.4"/>
+              <path d="M5 19.2c.8-3.4 3.5-5.2 7-5.2s6.2 1.8 7 5.2"/>
+            </svg>
+          </a>
+          <button class="icon-btn cart-btn" id="cartOpen" type="button" aria-label="Abrir carrito">
+            <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="#fff" stroke-width="1.7">
+              <circle cx="9" cy="20" r="1.4"/><circle cx="18" cy="20" r="1.4"/>
+              <path d="M3 4h2l2.2 11.2a2 2 0 0 0 2 1.6h8.3a2 2 0 0 0 2-1.5L21 8H7"/>
+            </svg>
+            <span class="cart-count" id="cartCount">0</span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- INICIO -->
+      <div data-view="inicio">
+        <section class="hero" aria-labelledby="heroTitle">
+          <div class="hero-copy">
+            <h1 id="heroTitle">Tu estilo,<br>en cada camiseta</h1>
+            <p>Diseños únicos, calidad y comodidad<br>en un solo lugar</p>
+            <a href="#tienda" class="btn-red" data-nav="tienda">Ver tienda</a>
+          </div>
+        </section>
+
+        <section class="benefits" aria-label="Beneficios">
+          <article class="benefit">
+            <span class="benefit-icon icon-black" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none">
+                <path d="M6 28h24v-12H6v12zm24 0h8l6 8v4h-4.5a3.5 3.5 0 1 1-7 0H17.5a3.5 3.5 0 1 1-7 0H6v-4h24v-8z" fill="#fff"/>
+              </svg>
+            </span>
+            <div>
+              <h3>Envíos a todo el país</h3>
+              <p>Rápidos y Seguros</p>
+            </div>
+          </article>
+          <article class="benefit">
+            <span class="benefit-icon icon-red" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none">
+                <path d="M24 6l14 6v12c0 9.5-6.2 16.6-14 20-7.8-3.4-14-10.5-14-20V12l14-6z" fill="#fff"/>
+                <path d="M17 24l5 5 9-10" stroke="#e31c2d" stroke-width="3" fill="none" stroke-linecap="round"/>
+              </svg>
+            </span>
+            <div>
+              <h3>Pagos seguros</h3>
+              <p>Tu Compra Protegida</p>
+            </div>
+          </article>
+          <article class="benefit">
+            <span class="benefit-icon icon-red" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none">
+                <path d="M24 6l4.8 12.4H42l-10.6 7.8 4.1 12.8L24 31.6 12.5 39l4.1-12.8L6 18.4h13.2L24 6z" fill="#fff"/>
+              </svg>
+            </span>
+            <div>
+              <h3>Productos de calidad</h3>
+              <p>Diseños que te Representan</p>
+            </div>
+          </article>
+        </section>
+
+        <section class="section" id="categorias" aria-labelledby="catTitle">
+          <h2 id="catTitle">Categorías destacadas</h2>
+          <div class="category-grid">
+            <button class="paper-card category-card" type="button" data-filter="hombres">
+              <img src="assets/cat-hombres.jpg" alt="Camiseta de corte masculino" width="220" height="260">
+              <span>Hombres</span>
+            </button>
+            <button class="paper-card category-card" type="button" data-filter="mujeres">
+              <img src="assets/cat-mujeres.jpg" alt="Camiseta de corte femenino" width="220" height="260">
+              <span>Mujeres</span>
+            </button>
+            <button class="paper-card category-card" type="button" data-filter="ninos">
+              <img src="assets/cat-ninos.jpg" alt="Camiseta infantil" width="220" height="260">
+              <span>Niños</span>
+            </button>
+            <button class="paper-card category-card" type="button" data-filter="estilos">
+              <img src="assets/cat-estilos.jpg" alt="Camiseta de estilo urbano" width="220" height="260">
+              <span>Estilos</span>
+            </button>
+            <button class="paper-card category-card" type="button" data-filter="tematicas">
+              <img src="assets/cat-tematicas.jpg" alt="Camiseta temática" width="220" height="260">
+              <span>Temáticas</span>
+            </button>
+          </div>
+        </section>
+
+        <section class="section bestsellers" aria-labelledby="bestTitle">
+          <h2 id="bestTitle">Productos más vendidos</h2>
+          <div class="carousel-wrap">
+            <button class="carousel-arrow prev" id="carouselPrev" type="button" aria-label="Anterior">‹</button>
+            <div class="carousel-viewport" id="carouselViewport">
+              <div class="carousel-track" id="carouselTrack"></div>
+            </div>
+            <button class="carousel-arrow next" id="carouselNext" type="button" aria-label="Siguiente">›</button>
+          </div>
+        </section>
+      </div>
+
+      <!-- TIENDA -->
+      <section class="section view-page" data-view="tienda" hidden>
+        <h2 id="shopTitle">Tienda</h2>
+        <p class="lead" id="shopLead">Camisetas de diseño propio. No son productos oficiales de clubes ni marcas.</p>
+        <div class="filters" id="filters">
+          <button type="button" class="chip is-active" data-filter="all">Todas</button>
+          <button type="button" class="chip" data-filter="hombres">Hombres</button>
+          <button type="button" class="chip" data-filter="mujeres">Mujeres</button>
+          <button type="button" class="chip" data-filter="ninos">Niños</button>
+          <button type="button" class="chip" data-filter="estilos">Estilos</button>
+          <button type="button" class="chip" data-filter="tematicas">Temáticas</button>
+        </div>
+        <p class="results-meta" id="resultsMeta"></p>
+        <div class="product-grid" id="productGrid"></div>
+      </section>
+
+      <!-- NOSOTROS -->
+      <section class="section view-page prose" data-view="nosotros" hidden>
+        <h2>Sobre nosotros</h2>
+        <p>TiendaTee nació para quienes viven el fútbol como estilo. Diseñamos camisetas inspiradas en el deporte, con cortes cómodos y gráficos originales.</p>
+        <p>Nuestros productos son de diseño propio. No comercializamos camisetas oficiales ni utilizamos marcas registradas de clubes o fabricantes.</p>
+        <p>Trabajamos envíos a todo el Perú y un servicio cercano para que elijas la camiseta que mejor te representa.</p>
+      </section>
+
+      <!-- CONTACTO -->
+      <section class="section view-page" data-view="contacto" hidden>
+        <h2>Contacto</h2>
+        <p class="lead">Escríbenos y te respondemos en horario de atención.</p>
+        <form class="form-card" id="contactForm" novalidate>
+          <label>
+            Nombre
+            <input type="text" name="nombre" required minlength="2" placeholder="Tu nombre">
+          </label>
+          <label>
+            Correo electrónico
+            <input type="email" name="email" required placeholder="tucorreo@ejemplo.com">
+          </label>
+          <label>
+            Mensaje
+            <textarea name="mensaje" rows="5" required minlength="10" placeholder="¿En qué podemos ayudarte?"></textarea>
+          </label>
+          <p class="form-error" id="contactError" hidden></p>
+          <button type="submit" class="btn-red">Enviar mensaje</button>
+        </form>
+      </section>
+
+      <!-- CUENTA (demo) -->
+      <section class="section view-page" data-view="cuenta" hidden>
+        <h2>Mi cuenta</h2>
+        <p class="notice">Esta pantalla es una demostración de interfaz. No hay autenticación real ni se almacenan contraseñas en un servidor.</p>
+        <div class="auth-tabs">
+          <button type="button" class="chip is-active" id="tabLogin">Iniciar sesión</button>
+          <button type="button" class="chip" id="tabRegister">Registrarme</button>
+        </div>
+        <form class="form-card" id="loginForm" novalidate>
+          <label>
+            Correo
+            <input type="email" name="email" required placeholder="tucorreo@ejemplo.com">
+          </label>
+          <label>
+            Contraseña
+            <input type="password" name="password" required minlength="6" placeholder="Mínimo 6 caracteres">
+          </label>
+          <p class="form-error" id="loginError" hidden></p>
+          <button type="submit" class="btn-red">Entrar (demo)</button>
+        </form>
+        <form class="form-card" id="registerForm" novalidate hidden>
+          <label>
+            Nombre
+            <input type="text" name="nombre" required minlength="2">
+          </label>
+          <label>
+            Correo
+            <input type="email" name="email" required>
+          </label>
+          <label>
+            Contraseña
+            <input type="password" name="password" required minlength="6">
+          </label>
+          <p class="form-error" id="registerError" hidden></p>
+          <button type="submit" class="btn-red">Crear cuenta (demo)</button>
+        </form>
+        <p class="demo-user" id="demoUser" hidden></p>
+      </section>
+
+      <section class="section view-page prose" data-view="envios" hidden>
+        <h2>Envíos</h2>
+        <p>Realizamos envíos a todo el Perú. Lima Metropolitana: 24 a 48 horas hábiles. Provincias: 3 a 6 días hábiles según destino.</p>
+        <p>El costo de envío se informa al confirmar el pedido. Esta tienda es una demostración: no se despachan pedidos reales.</p>
+      </section>
+
+      <section class="section view-page prose" data-view="devoluciones" hidden>
+        <h2>Devoluciones</h2>
+        <p>Tienes 7 días para solicitar un cambio por talla, siempre que la prenda esté sin uso y con etiquetas.</p>
+        <p>No aceptamos devoluciones de productos personalizados. En esta demo no se procesan devoluciones reales.</p>
+      </section>
+
+      <section class="section view-page prose" data-view="terminos" hidden>
+        <h2>Términos y condiciones</h2>
+        <p>El uso de este sitio implica la aceptación de que se trata de un catálogo de demostración. Los precios en soles (S/) son de ejemplo y pueden editarse en el código.</p>
+        <p>TiendaTee no representa a clubes, selecciones ni marcas deportivas. Los diseños son ilustrativos y genéricos.</p>
+      </section>
+    </main>
+
+    <!-- Pie de página -->
+    <footer class="site-footer">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="brand footer-logo">
+            <span class="brand-mark" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none">
+                <path d="M16 10h16l8-4 2 8-6 3v21a3 3 0 0 1-3 3H15a3 3 0 0 1-3-3V17l-6-3 2-8 8 4z" fill="#fff"/>
+                <path d="M16 10h16" stroke="#e31c2d" stroke-width="2"/>
+              </svg>
+            </span>
+            <span class="brand-name">Tienda<span>Tee</span></span>
+          </div>
+          <p>Tu estilo, nuestra pasión</p>
+        </div>
+        <div>
+          <h3>Enlaces rápidos</h3>
+          <ul>
+            <li><a href="#inicio" data-nav="inicio">Inicio</a></li>
+            <li><a href="#tienda" data-nav="tienda">Tienda</a></li>
+            <li><a href="#categorias" data-nav="categorias">Categorías</a></li>
+            <li><a href="#cuenta" data-nav="cuenta">Mi cuenta</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Información</h3>
+          <ul>
+            <li><a href="#nosotros" data-nav="nosotros">Sobre nosotros</a></li>
+            <li><a href="#envios" data-nav="envios">Envíos</a></li>
+            <li><a href="#devoluciones" data-nav="devoluciones">Devoluciones</a></li>
+            <li><a href="#terminos" data-nav="terminos">Términos y condiciones</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h3>Redes sociales</h3>
+          <div class="socials">
+            <a href="https://www.facebook.com/profile.php?id=61595296434392" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+              <svg viewBox="0 0 24 24"><path fill="#fff" d="M14 9h3V6h-3c-2.2 0-4 1.8-4 4v2H8v3h2v7h3v-7h3l1-3h-4v-2c0-.6.4-1 1-1z"/></svg>
+            </a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8"><rect x="4" y="4" width="16" height="16" rx="5"/><circle cx="12" cy="12" r="3.5"/><circle cx="17.2" cy="6.8" r=".8" fill="#fff" stroke="none"/></svg>
+            </a>
+            <a href="https://www.tiktok.com" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+              <svg viewBox="0 0 24 24" fill="#fff"><path d="M14 4v10.2a3.2 3.2 0 1 1-2.2-3V8.4c1.4.9 2.6 1.4 4.2 1.5V6.6c-.8-.1-1.5-.4-2-.9V4h0z"/></svg>
+            </a>
+            <a href="https://www.youtube.com/channel/UC90fnlJQnGxmZmpwCxyndoQ" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+              <svg viewBox="0 0 24 24"><path fill="#fff" d="M22 12s0-3.2-.4-4.7c-.2-.8-.9-1.5-1.7-1.7C18.2 5.2 12 5.2 12 5.2s-6.2 0-7.9.4c-.8.2-1.5.9-1.7 1.7C2 8.8 2 12 2 12s0 3.2.4 4.7c.2.8.9 1.5 1.7 1.7 1.7.4 7.9.4 7.9.4s6.2 0 7.9-.4c.8-.2 1.5-.9 1.7-1.7.4-1.5.4-4.7.4-4.7zM10 15.5v-7l6 3.5-6 3.5z"/></svg>
+            </a>
+          </div>
+          <p class="sigue">Síguenos</p>
+          <h3>Contacto</h3>
+          <ul>
+            <li><a href="mailto:hola@tiendatee.pe">Correo electrónico</a></li>
+            <li><a href="https://wa.me/51900000000" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
+            <li><a href="tel:+51900000000">Teléfono</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Panel del carrito -->
+  <div class="overlay" id="overlay" hidden></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-hidden="true" aria-labelledby="cartTitle">
+    <div class="cart-head">
+      <h2 id="cartTitle">Tu carrito</h2>
+      <button type="button" class="close-btn" id="cartClose" aria-label="Cerrar carrito">×</button>
+    </div>
+    <div class="cart-items" id="cartItems"></div>
+    <div class="cart-foot">
+      <p class="subtotal">Subtotal: <strong id="cartSubtotal">S/ 0.00</strong></p>
+      <p class="demo-note">Demostración: no se procesan pagos reales.</p>
+      <button type="button" class="btn-red" id="checkoutBtn">Continuar (demo)</button>
+    </div>
+  </aside>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
